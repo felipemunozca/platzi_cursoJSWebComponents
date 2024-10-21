@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Custom Elements</title>
+</head>
+<body>
+    <!-- N_7.6: Se agrega la etiqueta con el mismo nombre utilizado en el método define() en el punto N7.5 -->
+    <my-element></my-element>
+
+    <!-- N_7.15: Puedo agregar mas de una vez la misma etiqueta de componente, por ejemplo si estuviera tratando de hacer una card, 
+    podría llamarla varias veces y eso no genera errores al levantar la vista. -->
+    <my-element></my-element>
+
+    <!-- N_7.1: Se agrega el archivo javascript como tipo modulo. -->
+    <!-- IMPORTANTE: par poder ver el resultado del código en el navegador, se debe abrir levantando un servidor, este se puede hacer
+    con live server o instalando alguna dependencia como http-server. -->
+    <script type="module" src="./my-element.js"></script>
+</body>
+</html>

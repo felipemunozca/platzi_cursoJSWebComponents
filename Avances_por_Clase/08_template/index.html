@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 - Template</title>
+    <style>
+        .title {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">Soy un titulo desde HTML</h2>
+    <!-- N8.1: Se crea un ejemplo utilizando la etiqueta <template> directamente en la vista html. Se agrega un titulo y un 
+        párrafo.
+    No aparecerá nada en la vista, si se revisa en el inspector de elementos, si aparecerá la etiqueta <template> junto a su 
+        contenido pero en la vista no se ve. Esto se debe a que con esta etiqueta su contenido no se renderiza desde el inicio, 
+        sino que se debe iniciar desde JavaScript. 
+    -->
+    <template>
+        <h2>Hola mundo again</h2>
+        <div>
+            <p>Soy más texto ejemplo de la clase</p>
+        </div>
+    </template>
+    <my-element></my-element>
+
+    <script type="module" src="./my-element.js"></script>
+</body>
+</html>
