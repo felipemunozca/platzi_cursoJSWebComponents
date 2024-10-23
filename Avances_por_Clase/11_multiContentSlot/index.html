@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11 - Multi Content Slot</title>
+</head>
+<body>
+    <h2 class="title">Soy un titulo</h2>
+    <my-element>
+        <!--  
+            N_11.2: Para poder diferenciar en que etiqueta <slot> va cada texto, se deben generar etiquetas que incluyan el 
+            nombre que se creo en el componente.
+            Pero en vez de utilizar el atributo "name", se debe utilizar "slot" y aquí se agrega el mismo nombre que se coloco 
+            en el archivo javascript.
+        -->
+        <span slot="titulo">Soy un titulo que utiliza slot</span>
+        <span class="text" slot="parrafo">Soy un párrafo cargado en un slot</span>
+    </my-element>
+    
+    <script type="module" src="./my-element.js"></script>
+</body>
+</html>
