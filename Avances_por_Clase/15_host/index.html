@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15 - :host</title>
+</head>
+<body>
+    <!--  
+        N_15.2: Se crea una etiqueta personalizada para cargar el componente.
+        Dentro se agregan dos etiquetas <span> con contenido dinámico que aparecerá dentro del componente.    
+    -->
+    <my-element>
+        <span slot="title">Hola desde un componente 1</span>
+        <span slot="parrafo">Soy texto ejemplo</span>
+    </my-element>
+    
+    <!--  
+        N_15.5: Se agregan un segundo y tercer componente para ver como se diferencian con estilos personalizados para cada uno.
+
+        N_15.8: Se crean ciertas reglas para los componentes.
+        Al componente 2 se le agrega la clase "blue".
+        Al componente 3 se le agrega el atributo yellow.
+    -->
+    <my-element class="blue">
+        <span slot="title">Hola desde un componente 2</span>
+        <span slot="parrafo">Soy texto ejemplo</span>
+    </my-element>
+    
+    <my-element yellow>
+        <span slot="title">Hola desde un componente 3</span>
+        <span slot="parrafo">Soy texto ejemplo</span>
+    </my-element>
+    
+    <!--  
+        N_15.11: Se crea un nuevo componente, el cual tendrá clases y atributos para probar cuales serán los que tendrán mas especificidad a la hora de crear el DOM.
+    -->
+    <article class="card">
+        <my-element yellow>
+            <span slot="title">Hola desde un componente 3</span>
+            <span slot="parrafo">Soy texto ejemplo</span>
+        </my-element>
+    </article>
+
+    <script type="module" src="./my-element.js"></script>
+</body>
+</html>
