@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17 - CSS Custom Properties</title>
+    <style>
+        /* N_17.5: A continuación se comenzaran a hacer cambios por fuera.
+        Dentro de los estilos globales dentro de la etiqueta <style> se puede llamar a la etiqueta personalizada "my-element".
+        Se agregan los mismos nombres de variables del color principal y el tamaño principal como están en el archivo javascript 
+        y se cambian por nuevos valores. */
+        my-element {
+            --primary-color: blue;
+            --heading-primary: 40px;
+        }
+
+        /* N_17.7: Ahora para cada clase agregada a los componentes clonados, se les agregan estilos propios utilizando las variables para modificar de forma especifica. */
+        .segundo {
+            --primary-color: red;
+        }
+        .tercero {
+            --secondary-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        N_17.2: Se reutiliza el componente de clases pasadas.
+        Mantendremos el mismo orden de las clases pasadas, etiquetas <span> para un titulo y un párrafo.
+    -->
+    <my-element>
+        <span slot="title">Hola desde un componente 1</span>
+        <span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+    </my-element>
+
+    <!--  
+        N_17.6: Se crean dos clones del componente original.
+        Ademas, se les agregan clases únicas a cada componente, siendo las clases "segundo" y "tercero".
+    -->
+    <my-element class="segundo">
+        <span slot="title">Hola desde un componente 2</span>
+        <span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+    </my-element>
+    <my-element class="tercero">
+        <span slot="title">Hola desde un componente 3</span>
+        <span slot="parrafo">Hola desde una etiqueta de parrafo</span>
+    </my-element>
+
+    <script type="module" src="./my-element.js"></script>
+</body>
+</html>
